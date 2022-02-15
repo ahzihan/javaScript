@@ -5,7 +5,6 @@ function animalCount(miles){
     const third10MilesAnimalDensity=30;
     const first10Miles=10*first10MilesAnimalDensity;
     
-
         if(miles<=10){
             const firstTotalAnimals=first10Miles;
             return firstTotalAnimals;
