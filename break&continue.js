@@ -10,13 +10,14 @@ const products=[
     {name:'Hp-zx', price:50000},
     {name:'Asus laptop', price:60000}
 ];
+
 //Break
-// for(const product of products){
-//     if(product.price<5000){
-//         break;
-//     }
-//     console.log(product);
-// }
+for(const product of products){
+    if(product.price<5000){
+        break;
+    }
+    console.log(product);
+}
 
 //Continue
 
