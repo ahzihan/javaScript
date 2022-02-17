@@ -94,12 +94,12 @@ for(let i=0; i<ages.length;i++){
 
 //9. you have an array of numbers, display only the numbers bigger than 80.
 function biggerNumber(numbers){
-    let largest=numbers[0];
+    let largest=[];
     for(let i=0; i<numbers.length;i++){
         let element=numbers[i];
-        if(element>largest){
-            largest=element;
-        }
+        if(element>80){
+            largest[i]=element;
+        } 
     }
     return largest;
 }

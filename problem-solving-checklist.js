@@ -32,8 +32,36 @@ console.log('Total Pages : ',totalPages);
 
 
 //4.friend name lenth in an array
-function bestFriend(){}
+function bestFriend( data ) { 
+    let longName = data[0];
+    for ( let i = 0; i < data.length;i++ ) {
+        let element = data[ i ];
+        if ( element > longName ) {
+            longName = element;
+        }
+    }
+    return longName;
+}
+
+const friends = [ 'Alamin', 'Arif Adnan', 'Masum Billah', 'Emon', 'Bijoy Debnath','Md Akbar Hossain' ];
+const friend=bestFriend(friends);
+console.log('Friend Name is : ',friend); 
 
 //5.will stop the loop if the array has any negative number and returns all the posetive number before the negative number
 
-function onlyPosetive(){}
+function onlyPosetive( data ) {
+    let posetiveNumber = [];
+    for ( let i = 0; i < data.length; i++ ){
+        let element = data[ i ];
+        if ( element > 0 ) {
+            posetiveNumber[i] = element;
+        } else {
+            break; 
+        }
+        
+    }
+    return posetiveNumber;
+ }
+const values = [ 20, 40, 45, 12, 5, -7, 10, 30 ];
+const value = onlyPosetive( values );
+console.log( value );
