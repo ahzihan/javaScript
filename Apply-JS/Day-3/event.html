@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>More Event Handler</h2>
+    <section>
+        <h3 id="title">This is heading three</h3>
+        <input id="delete" type="text" placeholder="delete">
+        <button id="delete-btn" disabled>Delete</button>
+
+    </section>
+
+    <script>
+        document.getElementById( 'delete-btn' ).addEventListener( 'click', function () {
+            document.getElementById( 'title' ).style.display = 'none';
+        } );
+        //focus
+        document.getElementById( 'delete' ).addEventListener( 'focus', function () {
+            document.getElementById( 'delete' ).style.border = '3px solid red';
+        } );
+        //blur
+        document.getElementById( 'delete' ).addEventListener( 'blur', function () {
+            document.getElementById( 'delete' ).style.border = '';
+        } );
+        //keyup
+        document.getElementById( 'delete' ).addEventListener( 'keyup', function ( event ) {
+            // const inputValue = document.getElementById( 'delete' );
+            // console.log( inputValue.value );
+            const deletBtn = document.getElementById( 'delete-btn' );
+            if ( event.target.value == 'delete' ) {
+                deletBtn.removeAttribute( 'disabled' );
+                document.getElementById( 'delete' ).style.border = '';
+            }
+            else {
+                deletBtn.setAttribute( 'disabled', true );
+            }
+        } );
+        //change
+        document.getElementById( 'delete' ).addEventListener( 'change', function () {
+            const inputValue = document.getElementById( 'delete' );
+            console.log( inputValue.value );
+        } );
+
+    </script>
+</body>
+
+</html>
